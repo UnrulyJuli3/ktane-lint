@@ -1,4 +1,4 @@
-import { basename, parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { Rule } from "./rule.js";
 
 const repoFiles: readonly string[] = [
@@ -19,11 +19,11 @@ export class ParentFolder extends Rule {
     }
 
     protected lint() {
-        const file = parse(this.path);
+        const file = pathMod.parse(this.path);
 
         if (repoFiles.includes(file.base)) return;
 
-        const parentFolder = basename(file.dir);
+        const parentFolder = pathMod.basename(file.dir);
 
         switch (file.ext) {
             case ".html":
@@ -35,7 +35,7 @@ export class ParentFolder extends Rule {
             case ".svg": {
                 let parent = file;
                 while (parent && parent.base !== "img") {
-                    parent = parse(parent.dir);
+                    parent = pathMod.parse(parent.dir);
                 }
 
                 if (!parent) {

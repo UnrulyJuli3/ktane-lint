@@ -1,5 +1,5 @@
 import { Unzipped, unzipSync } from "fflate";
-import { parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { repo } from "./repo.js";
 import { allRules, singleFileRules } from "./rules/list.js";
 
@@ -26,7 +26,7 @@ export const lintFiles = (filesRaw: Unzipped) => {
     const resList: FileProblems[] = [];
 
     for (const path in files) {
-        const pathExt = parse(path).ext;
+        const pathExt = pathMod.parse(path).ext;
 
         const fileRes: FileProblems = {
             name: path,

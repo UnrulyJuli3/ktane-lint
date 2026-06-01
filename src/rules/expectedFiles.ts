@@ -1,4 +1,4 @@
-import { parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { repo } from "../repo.js";
 import { Rule } from "./rule.js";
 
@@ -8,7 +8,7 @@ export class ExpectedFiles extends Rule {
     }
 
     protected lint() {
-        const moduleName = parse(this.path).name;
+        const moduleName = pathMod.parse(this.path).name;
 
         if (!moduleName) return;
 
@@ -19,7 +19,7 @@ export class ExpectedFiles extends Rule {
         for (const path in this.files) {
             if (path === this.path) continue;
 
-            if (parse(path).name === moduleName) {
+            if (pathMod.parse(path).name === moduleName) {
                 files.push(path);
             }
 

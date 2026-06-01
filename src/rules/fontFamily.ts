@@ -1,7 +1,7 @@
 import { CssDeclarationAST, CssStylesheetAST, parse as parseCss } from "@adobe/css-tools";
 import { Document, isText, Node } from "domhandler";
 import { DomUtils } from "htmlparser2";
-import { parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { HTMLRule } from "./htmlRule.js";
 
 const genericFamilies: readonly string[] = [
@@ -34,7 +34,7 @@ export class FontFamily extends HTMLRule {
         }
 
         for (const path in this.files) {
-            if (parse(path).ext === ".css") {
+            if (pathMod.parse(path).ext === ".css") {
                 trees.push(parseCss(this.files[path]));
             }
         }

@@ -1,4 +1,4 @@
-import { basename } from "path-browserify";
+import pathMod from "path-browserify";
 import { Rule } from "./rule.js";
 
 export class TemplateManual extends Rule {
@@ -7,7 +7,7 @@ export class TemplateManual extends Rule {
     }
 
     protected lint() {
-        switch (basename(this.path)) {
+        switch (pathMod.basename(this.path)) {
             case "Example Image.png":
             case "Module Name.svg":
                 this.report(`Template Manual files should not be included.`);

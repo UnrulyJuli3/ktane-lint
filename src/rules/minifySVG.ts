@@ -1,4 +1,4 @@
-import { basename, parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { Rule } from "./rule.js";
 
 export class MinifySVG extends Rule {
@@ -7,7 +7,7 @@ export class MinifySVG extends Rule {
     }
 
     protected lint() {
-        if ((basename(parse(this.path).dir) === "Component" || this.singleFile) && this.content.includes("\n")) {
+        if ((pathMod.basename(pathMod.parse(this.path).dir) === "Component" || this.singleFile) && this.content.includes("\n")) {
             this.report(`Component SVGs should be minified with SVGOMG.`);
         }
     }

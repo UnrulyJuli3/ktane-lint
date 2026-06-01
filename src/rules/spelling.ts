@@ -1,6 +1,6 @@
 import { Document, isText, Text } from "domhandler";
 import { DomUtils } from "htmlparser2";
-import { parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { dictionary } from "../dictionary.js";
 import { HTMLRule } from "./htmlRule.js";
 
@@ -10,7 +10,7 @@ export class Spelling extends HTMLRule {
     }
 
     protected lintHtml(doc: Document) {
-        const { name } = parse(this.path);
+        const { name } = pathMod.parse(this.path);
         if (name.includes("translated") || name.includes("all languages condensed (")) return;
 
         const body = DomUtils.findOne(e => e.tagName === "body", doc);

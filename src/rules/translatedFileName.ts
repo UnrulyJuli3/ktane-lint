@@ -1,4 +1,4 @@
-import { parse } from "path-browserify";
+import pathMod from "path-browserify";
 import { repo } from "../repo.js";
 import { Rule } from "./rule.js";
 
@@ -8,7 +8,7 @@ export class TranslatedFileName extends Rule {
     }
 
     protected lint() {
-        const { name } = parse(this.path);
+        const { name } = pathMod.parse(this.path);
 
         if (!/([A-Z\d❖][!-~]*) translated /.test(name) && !/\(.+ — .+\)/.test(name)) return;
 
