@@ -8,6 +8,10 @@ import { GraphicsFolder } from "./graphicsFolder.js";
 import { HeadTag } from "./headTag.js";
 import { HTMLHeadBody } from "./htmlHeadBody.js";
 import { ImageInSVG } from "./imageInSVG.js";
+import { InvalidDate } from "./json/invalidDate.js";
+import { InvalidJSON } from "./json/invalidJson.js";
+import { InvalidOption } from "./json/invalidOption.js";
+import { JSONSpelling } from "./json/jsonSpelling.js";
 import { MinifySVG } from "./minifySVG.js";
 import { NoManualContent } from "./noManualContent.js";
 import { NoTabs } from "./noTabs.js";
@@ -41,6 +45,10 @@ export const singleFileRules: readonly Rule[] = [
     new TranslatedFileName(),
     new TwoIndentJSON(),
     new W3CValidator(),
+    new InvalidDate(),
+    new InvalidJSON(),
+    new InvalidOption(),
+    new JSONSpelling(),
 ];
 
 export const allRules: readonly Rule[] = [
