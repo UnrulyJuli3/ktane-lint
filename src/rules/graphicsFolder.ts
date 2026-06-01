@@ -20,9 +20,7 @@ export class GraphicsFolder extends HTMLRule {
                 if (segments.length === 3 && segments[1] === "img") {
                     this.reportElement(`Graphics must be in the appropriate folder named for the module.`, element);
                 }
-            } catch (e) {
-                console.warn(e);
-            }
+            } catch (e) { }
         }
     }
 }

@@ -18,7 +18,6 @@ export class W3CValidator extends Rule {
         const report = validator.validateStringSync(this.content);
         if (!report.valid) {
             for (const result of report.results) {
-                console.log(result.messages);
                 for (const message of result.messages) {
                     if (message.severity === Severity.ERROR && !ignoredRules.some(rule => rule(message))) {
                         this.reportLine(message.message, message.line);
