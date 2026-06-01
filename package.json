@@ -1,0 +1,40 @@
+{
+    "name": "ktane-lint",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/main.js",
+    "type": "module",
+    "exports": {
+        "default": "./dist/main.js",
+        "types": "./dist/main.d.ts"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/UnrulyJuli3/ktane-lint.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "^11.5.0",
+            "onFail": "download"
+        }
+    },
+    "devDependencies": {
+        "@types/path-browserify": "^1.0.3",
+        "typescript": "^6.0.3"
+    },
+    "dependencies": {
+        "@adobe/css-tools": "^4.5.0",
+        "domhandler": "^6.0.1",
+        "fflate": "^0.8.3",
+        "html-validate": "^11.4.0",
+        "htmlparser2": "^12.0.0",
+        "path-browserify": "^1.0.1"
+    }
+}
