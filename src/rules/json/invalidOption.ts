@@ -21,7 +21,7 @@ export class InvalidOption extends JSONRule {
         if (!result.success) {
             const { properties } = z.treeifyError(result.error);
             for (const key in properties) {
-                console.log(`"${data[key]}" is not a valid option for ${key}.`);
+                this.report(`"${data[key]}" is not a valid option for ${key}.`);
             }
         }
     }
