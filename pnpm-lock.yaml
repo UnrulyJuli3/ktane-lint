@@ -213,9 +213,6 @@ importers:
       domhandler:
         specifier: ^6.0.1
         version: 6.0.1
-      fflate:
-        specifier: ^0.8.3
-        version: 0.8.3
       html-validate:
         specifier: ^11.4.0
         version: 11.4.0
@@ -279,9 +276,6 @@ packages:
 
   fast-uri@3.1.2:
     resolution: {integrity: sha512-rVjf7ArG3LTk+FS6Yw81V1DLuZl1bRbNrev6Tmd/9RaroeeRRJhAt7jg/6YFxbvAQXUCavSoZhPPj6oOx+5KjQ==}
-
-  fflate@0.8.3:
-    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
   html-validate@11.4.0:
     resolution: {integrity: sha512-cLFZDOCkJE3CgXoj74k4pI1cqC7zThbWJjXnllaQcEQ28cjJsD684DP/6V5BXtWE7ryq2FE8BEbSQVcZEZJKsg==}
@@ -386,8 +380,6 @@ snapshots:
   fast-deep-equal@3.1.3: {}
 
   fast-uri@3.1.2: {}
-
-  fflate@0.8.3: {}
 
   html-validate@11.4.0:
     dependencies:

@@ -1,4 +1,3 @@
-import { Unzipped, unzipSync } from "fflate";
 import pathMod from "path-browserify";
 import { repo } from "./repo.js";
 import { allRules, singleFileRules } from "./rules/list.js";
@@ -14,12 +13,7 @@ export interface FileProblem {
     readonly rule: string;
 }
 
-const textDecoder = new TextDecoder();
-
-export const lintFiles = (filesRaw: Unzipped) => {
-    // this also decodes binary files like images (so they become a jarbled string), but rules that involve those files types will not attempt to use the actual text content, so it's ok
-    const files = Object.fromEntries(Object.entries(filesRaw).map(entry => [entry[0], textDecoder.decode(entry[1])]));
-
+export const lintFiles = (files: Record<string, string>) => {
     const singleFile = Object.keys(files).length === 1;
     const rules = singleFile ? singleFileRules : allRules;
 
@@ -50,16 +44,8 @@ export const lintFiles = (filesRaw: Unzipped) => {
     return resList;
 };
 
-export const lintArchive = (data: Uint8Array) => lintFiles(unzipSync(data));
-
-export const lintFile = (name: string, data: Uint8Array<ArrayBuffer>) => {
-    try {
-        return lintArchive(data);
-    } catch (e) {
-        return lintFiles({
-            [name]: data,
-        });
-    }
-};
+export const lintFile = (name: string, data: string) => lintFiles({
+    [name]: data,
+});
 
 export const fetchRepo = () => repo.fetch();
