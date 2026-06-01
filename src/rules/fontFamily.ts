@@ -2,7 +2,7 @@ import { CssDeclarationAST, CssStylesheetAST, parse as parseCss } from "@adobe/c
 import { Document, isText, Node } from "domhandler";
 import { DomUtils } from "htmlparser2";
 import { parse } from "path-browserify";
-import { HTMLRule } from "./htmlRule";
+import { HTMLRule } from "./htmlRule.js";
 
 const genericFamilies: readonly string[] = [
     "serif",

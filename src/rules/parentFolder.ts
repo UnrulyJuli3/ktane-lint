@@ -1,5 +1,5 @@
 import { basename, parse } from "path-browserify";
-import { Rule } from "./rule";
+import { Rule } from "./rule.js";
 
 const repoFiles: readonly string[] = [
     "Bomb.svg",

@@ -1,7 +1,7 @@
 import { Unzipped, unzipSync } from "fflate";
 import { parse } from "path-browserify";
-import { repo } from "./repo";
-import { allRules, singleFileRules } from "./rules/list";
+import { repo } from "./repo.js";
+import { allRules, singleFileRules } from "./rules/list.js";
 
 export interface FileProblems {
     readonly name: string;

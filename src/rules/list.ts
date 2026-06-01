@@ -1,25 +1,25 @@
-import { BrowserDownloaded } from "./browserDownloaded";
-import { ConsecutiveBRs } from "./consecutiveBRs";
-import { ConsecutiveEmptyLines } from "./consecutiveEmptyLines";
-import { Doctype } from "./doctype";
-import { ExpectedFiles } from "./expectedFiles";
-import { FontFamily } from "./fontFamily";
-import { GraphicsFolder } from "./graphicsFolder";
-import { HeadTag } from "./headTag";
-import { HTMLHeadBody } from "./htmlHeadBody";
-import { ImageInSVG } from "./imageInSVG";
-import { MinifySVG } from "./minifySVG";
-import { NoManualContent } from "./noManualContent";
-import { NoTabs } from "./noTabs";
-import { NoTextSVG } from "./noTextSVG";
-import { ParentFolder } from "./parentFolder";
-import { Rule } from "./rule";
-import { RuleSeed } from "./ruleSeed";
-import { Spelling } from "./spelling";
-import { TemplateManual } from "./templateManual";
-import { TranslatedFileName } from "./translatedFileName";
-import { TwoIndentJSON } from "./twoIndentJSON";
-import { W3CValidator } from "./w3cValidator";
+import { BrowserDownloaded } from "./browserDownloaded.js";
+import { ConsecutiveBRs } from "./consecutiveBRs.js";
+import { ConsecutiveEmptyLines } from "./consecutiveEmptyLines.js";
+import { Doctype } from "./doctype.js";
+import { ExpectedFiles } from "./expectedFiles.js";
+import { FontFamily } from "./fontFamily.js";
+import { GraphicsFolder } from "./graphicsFolder.js";
+import { HeadTag } from "./headTag.js";
+import { HTMLHeadBody } from "./htmlHeadBody.js";
+import { ImageInSVG } from "./imageInSVG.js";
+import { MinifySVG } from "./minifySVG.js";
+import { NoManualContent } from "./noManualContent.js";
+import { NoTabs } from "./noTabs.js";
+import { NoTextSVG } from "./noTextSVG.js";
+import { ParentFolder } from "./parentFolder.js";
+import { Rule } from "./rule.js";
+import { RuleSeed } from "./ruleSeed.js";
+import { Spelling } from "./spelling.js";
+import { TemplateManual } from "./templateManual.js";
+import { TranslatedFileName } from "./translatedFileName.js";
+import { TwoIndentJSON } from "./twoIndentJSON.js";
+import { W3CValidator } from "./w3cValidator.js";
 
 export const singleFileRules: readonly Rule[] = [
     new BrowserDownloaded(),

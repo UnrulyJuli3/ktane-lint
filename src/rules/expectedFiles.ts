@@ -1,6 +1,6 @@
 import { parse } from "path-browserify";
-import { repo } from "../repo";
-import { Rule } from "./rule";
+import { repo } from "../repo.js";
+import { Rule } from "./rule.js";
 
 export class ExpectedFiles extends Rule {
     constructor() {

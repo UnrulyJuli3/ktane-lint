@@ -1,6 +1,6 @@
 import { Document } from "domhandler";
 import { DomUtils } from "htmlparser2";
-import { HTMLRule } from "./htmlRule";
+import { HTMLRule } from "./htmlRule.js";
 
 export class HTMLHeadBody extends HTMLRule {
     constructor() {

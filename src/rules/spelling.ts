@@ -1,8 +1,8 @@
 import { Document, isText, Text } from "domhandler";
 import { DomUtils } from "htmlparser2";
 import { parse } from "path-browserify";
-import { dictionary } from "../dictionary";
-import { HTMLRule } from "./htmlRule";
+import { dictionary } from "../dictionary.js";
+import { HTMLRule } from "./htmlRule.js";
 
 export class Spelling extends HTMLRule {
     constructor() {

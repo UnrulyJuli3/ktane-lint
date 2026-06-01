@@ -1,6 +1,6 @@
 import { Document, Element, isTag, isText } from "domhandler";
 import { DomUtils } from "htmlparser2";
-import { HTMLRule } from "./htmlRule";
+import { HTMLRule } from "./htmlRule.js";
 
 const nth = (num: number) => {
     switch (num > 20 ? num % 10 : num) {

@@ -1,6 +1,6 @@
 import { Document, isText } from "domhandler";
 import { DomUtils } from "htmlparser2";
-import { HTMLRule } from "./htmlRule";
+import { HTMLRule } from "./htmlRule.js";
 
 export class RuleSeed extends HTMLRule {
     constructor() {

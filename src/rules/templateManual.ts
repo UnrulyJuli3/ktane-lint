@@ -1,5 +1,5 @@
 import { basename } from "path-browserify";
-import { Rule } from "./rule";
+import { Rule } from "./rule.js";
 
 export class TemplateManual extends Rule {
     constructor() {

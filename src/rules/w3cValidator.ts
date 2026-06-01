@@ -1,5 +1,5 @@
 import { HtmlValidate, Message, Severity } from "html-validate";
-import { Rule } from "./rule";
+import { Rule } from "./rule.js";
 
 const validator = new HtmlValidate({
     extends: ["html-validate:standard"],

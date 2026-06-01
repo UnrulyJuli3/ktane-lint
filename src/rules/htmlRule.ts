@@ -1,6 +1,6 @@
 import { Document, Node } from "domhandler";
 import { parseDocument } from "htmlparser2";
-import { Rule } from "./rule";
+import { Rule } from "./rule.js";
 
 // using htmlparser2 over i.e. native DOMParser or JSDOM because the behavior is identical between browser and Node
 // - julie

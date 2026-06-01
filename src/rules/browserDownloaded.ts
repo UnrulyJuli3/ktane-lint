@@ -1,5 +1,5 @@
 import { Document } from "domhandler";
-import { HTMLRule } from "./htmlRule";
+import { HTMLRule } from "./htmlRule.js";
 import { DomUtils } from "htmlparser2";
 
 export class BrowserDownloaded extends HTMLRule {
