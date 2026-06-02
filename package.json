@@ -1,6 +1,6 @@
 {
     "name": "ktane-lint",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "",
     "main": "./dist/main.js",
     "type": "module",
