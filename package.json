@@ -27,14 +27,17 @@
         }
     },
     "devDependencies": {
+        "@types/nspell": "^2.1.6",
         "@types/path-browserify": "^1.0.3",
         "typescript": "^6.0.3"
     },
     "dependencies": {
         "@adobe/css-tools": "^4.5.0",
+        "browser-or-node": "^3.0.0",
         "domhandler": "^6.0.1",
         "html-validate": "^11.4.0",
         "htmlparser2": "^12.0.0",
+        "nspell": "^2.1.5",
         "path-browserify": "^1.0.1",
         "zod": "^4.4.3"
     }
