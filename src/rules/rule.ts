@@ -14,7 +14,7 @@ export abstract class Rule {
     protected singleFile: boolean = false;
 
     protected get content() {
-        return this.files[this.path];
+        return this.files[this.path].replace(/^\ufeff/, "");
     }
 
     protected get lines() {
